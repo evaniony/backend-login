@@ -8,9 +8,11 @@ export const userModel = model(
   "users" /* nombre de la collection donde se va a hacer el crud */,
   /* OBLIGA A CREATE-UPDATE A SEGUIR ESTE MOLDE */
   new Schema({
-    firstName: { type: String, required: true},
-    lastName: { type: String, required: true},
-    email: { type: String, required: true},
+    first_name: { type: String },
+    last_name: { type: String },
+    email: { type: String, required: true, unique: true},
+    age: { type: Number },
+    password: { type: String, required: true},
   })
 );
 
